@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "rsbuild dev",
-    "build": "vue-tsc --noEmit && rsbuild build",
+    "build": "rsbuild build",
     "preview": "rsbuild preview",
     "tauri": "tauri"
   },
@@ -18,7 +18,6 @@
     "@rsbuild/plugin-vue": "1.0.7",
     "@rsbuild/core": "1.2.19",
     "typescript": "5.8.2",
-    "vue-tsc": "2.2.8",
     "@tauri-apps/cli": "^2"
   }
 }
