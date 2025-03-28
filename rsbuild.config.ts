@@ -1,7 +1,6 @@
 import { defineConfig, loadEnv } from "@rsbuild/core";
 import { pluginVue } from "@rsbuild/plugin-vue";
 
-const { publicVars } = loadEnv({ prefixes: ["VITE_"] });
 const host = process.env.TAURI_DEV_HOST;
 
 export default defineConfig({
@@ -11,15 +10,6 @@ export default defineConfig({
   performance: {
     chunkSplit: {
       strategy: "split-by-experience",
-    },
-  },
-  html: {
-    template: "./index.html",
-  },
-  source: {
-    define: publicVars,
-    entry: {
-      index: "./src/main.ts",
     },
   },
   dev: {
